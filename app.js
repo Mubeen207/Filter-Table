@@ -63,9 +63,6 @@ function add() {
     } else if (country.value === "") {
       country.style.border = "0.5px solid red";
     } else if (name1.value !== "" && country.value !== "") {
-      // console.log(cityName);
-      // console.log(countryName);
-
       tbody.appendChild(addSetionTr);
       addSetionTr.appendChild(addSetionTd1);
       addSetionTr.appendChild(addSetionTd2);
@@ -96,32 +93,3 @@ function recheak(start) {
     }
   }
 }
-// function recheak() {
-//   found = true;
-//   tbodyChild = tbody.childNodes;
-//   for (let i = 0; i < tbodyChild.length; i++) {
-//     if (tbodyChild[i].nodeType === 1 && found) {
-//       for (let j = 0; j < tbodyChild[i].childNodes.length; j++) {
-//         if (tbodyChild[i].childNodes[j].nodeType === 1 && found) {
-//           if (
-//             name1.value.toLowerCase() ===
-//               tbodyChild[i].childNodes[j].innerHTML.toLowerCase() ||
-//             country.value.toLowerCase() ===
-//               tbodyChild[i].childNodes[j].innerHTML.toLowerCase()
-//           ) {
-//             if (
-//               country.value.toLowerCase() !==
-//               tbodyChild[i].childNodes[j].innerHTML.toLowerCase()
-//             ) {
-//               alert("Dublicate City Entry Not Allowed");
-
-//               found = false;
-//               start = false;
-//               return false;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
