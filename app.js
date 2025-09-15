@@ -1,5 +1,7 @@
 let myInput = document.getElementById("myInput");
 let myTable = document.getElementById("myTable");
+let tbody = myTable.querySelector("tbody");
+
 let name1 = document.getElementById("name1");
 let country = document.getElementById("country");
 let cityName = "";
@@ -8,7 +10,9 @@ let countryName = "";
 function myFunction() {
   let found = false;
   let filter = myInput.value.toLowerCase();
-  let rows = myTable.getElementsByTagName("tr");
+  let rows = myTable
+    .getElementsByTagName("tbody")[0]
+    .getElementsByTagName("tr");
 
   for (let i = 0; i < rows.length; i++) {
     let rowText = rows[i].innerText.toLowerCase();
@@ -56,7 +60,7 @@ function add() {
     console.log(cityName);
     console.log(countryName);
 
-    myTable.appendChild(addSetionTr);
+    tbody.appendChild(addSetionTr);
     addSetionTr.appendChild(addSetionTd1);
     addSetionTr.appendChild(addSetionTd2);
     addSetionTd1.innerHTML = cityName;
