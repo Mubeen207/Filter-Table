@@ -7,6 +7,7 @@ let cityName = "";
 let countryName = "";
 let found = true;
 let start = true;
+let tbodyChild;
 
 function myFunction() {
   let found = false;
@@ -81,19 +82,20 @@ function borderReset() {
 }
 function recheak() {
   found = true;
-  for (let i = 0; i < tbody.childNodes.length; i++) {
-    if (tbody.childNodes[i].nodeType === 1 && found) {
-      for (let j = 0; j < tbody.childNodes[i].childNodes.length; j++) {
-        if (tbody.childNodes[i].childNodes[j].nodeType === 1 && found) {
+  tbodyChild = tbody.childNodes;
+  for (let i = 0; i < tbodyChild.length; i++) {
+    if (tbodyChild[i].nodeType === 1 && found) {
+      for (let j = 0; j < tbodyChild[i].childNodes.length; j++) {
+        if (tbodyChild[i].childNodes[j].nodeType === 1 && found) {
           if (
             name1.value.toLowerCase() ===
-              tbody.childNodes[i].childNodes[j].innerHTML.toLowerCase() ||
+              tbodyChild[i].childNodes[j].innerHTML.toLowerCase() ||
             country.value.toLowerCase() ===
-              tbody.childNodes[i].childNodes[j].innerHTML.toLowerCase()
+              tbodyChild[i].childNodes[j].innerHTML.toLowerCase()
           ) {
             if (
               country.value.toLowerCase() !==
-              tbody.childNodes[i].childNodes[j].innerHTML.toLowerCase()
+              tbodyChild[i].childNodes[j].innerHTML.toLowerCase()
             ) {
               alert("Dublicate City Entry Not Allowed");
 
