@@ -33,7 +33,7 @@ function myFunction() {
     let addSetionTd1 = document.createElement("td");
     addSetionTr.id = "notFoundRow";
     addSetionTd1.colSpan = 2;
-    addSetionTd1.style.align = "center";
+    addSetionTd1.style.textAlign = "center";
     addSetionTd1.innerHTML = "Not Found";
     addSetionTr.appendChild(addSetionTd1);
     myTable.appendChild(addSetionTr);
