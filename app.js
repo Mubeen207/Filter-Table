@@ -1,4 +1,4 @@
-
+// filter table
 let myInput = document.getElementById("myInput");
 let myTable = document.getElementById("myTable");
 let name1 = document.getElementById("name1");
